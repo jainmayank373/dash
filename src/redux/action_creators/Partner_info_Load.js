@@ -388,7 +388,7 @@ export function onUploading(formData) {
                 method: "POST",
                 body: formData
             })
-            .then(res => res.json())
+            .then(res => {console.log("uploading response",res);res.json()})
             .then(data => {
 
                 if (data.errors) {
