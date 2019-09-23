@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+
+}
+.user_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.y_divider{
+    height: 20px;
+    width: 1px;
+    border:  1px lightgray dotted;
+}

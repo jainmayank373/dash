@@ -1,0 +1,22 @@
+
+.active{
+    background-color: green;
+    position: relative;
+  
+    height: 50px;
+    width: 4px;
+    
+  }
+  .not_active{
+    background-color: red;
+    position: relative;
+    height: 50px;
+    width: 4px;
+  }
+  .demand_map_table{
+      padding:7px;
+      width: 50%;
+  }
+  .MuiTableCell-root{
+    padding:10px !important;
+  }
