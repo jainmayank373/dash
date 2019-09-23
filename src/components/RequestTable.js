@@ -436,7 +436,6 @@ class RequestTable extends React.Component {
         formData.append("expiry_col", "14");
         formData.append("expiry_date_fromate", "14");
         formData.append("col_data", JSON.stringify([filedsObject]))
-        formData.append("name", JSON.stringify([{ name: "Mayank" }, { name: "jain" }]));
 
 
         this.props.dispatch(onUploading(formData));
