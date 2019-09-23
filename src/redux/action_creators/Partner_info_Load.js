@@ -382,13 +382,13 @@ export function onUploading(formData) {
         fetch("http://localhost:5000/csv",
             {
                 headers: {
+                    "Access-Control-Allow-Origin":"*",
                     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzAxNzU3MDQsImlhdCI6MTU2NzU4MzcwNCwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1hbGxvd2VkLXJvbGVzIjpbImFkbWluIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6ImFkbWluIn19.uoPdXjFlF57njVczLWIXB-6kcWdBGdJBQzgJf96YlRM"
                 },
-                mode:'no-cors',
                 method: "POST",
                 body: formData
             })
-            .then(res => {console.log("uploading response",res);res.json()})
+            .then(res => {console.log("uploading response",res); return res.json()})
             .then(data => {
 
                 if (data.errors) {
