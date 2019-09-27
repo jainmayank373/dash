@@ -379,7 +379,7 @@ export function onUploading(formData) {
     console.log("UPLOADING");
     return () => {
 
-        fetch("http://localhost:5000/csv",
+        fetch("http://ec2-13-234-67-82.ap-south-1.compute.amazonaws.com:5000/csv",
             {
                 headers: {
                     "Access-Control-Allow-Origin":"*",
@@ -388,7 +388,7 @@ export function onUploading(formData) {
                 method: "POST",
                 body: formData
             })
-            .then(res => {console.log("uploading response",res); return res.json()})
+            .then(res => {console.log("uploading response",(res.body)); return res.text()})
             .then(data => {
 
                 if (data.errors) {
